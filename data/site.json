@@ -1,0 +1,520 @@
+{
+  "_help": "All page content lives here. Edit text between the quotes, keep the quotes and commas, save, refresh. To reorder sections, move whole { ... } blocks in \"sections\". To hide one, set \"show\": false. See README.md.",
+  "owner": {
+    "name": "Rohit Chauhan",
+    "tagline": "15+ years of experience in Telecom BSS: Billing, Charging, International Roaming, Data Clearing, Mediation, RA/FM, Payments/Collections. Roles: Service Delivery (Operations), Agile Product Development, Solution Architect, Presales and Test Lead",
+    "linkedin": "https://www.linkedin.com/in/rohitchauhan101985/",
+    "github": "https://github.com/rohitchauhan47-eng"
+  },
+  "text": {
+    "pageTitle": "Telco AI Transformation Portfolio | Rohit Chauhan",
+    "siteName": "Telco AI Transformation Portfolio",
+    "eyebrow": "Telco AI Transformation Portfolio · learning in public",
+    "headline": "AI agents that work together to run a smarter telco",
+    "idea": "I am learning Gen AI, AI agents and Agentic AI by building them for real telecom problems. This page shows what a telco AI portfolio can look like: connected AI agents that help Sales, Marketing, Customer Support, Revenue Assurance and Operations make better decisions. The agents come from my telecom transformation case study.",
+    "footer": "Prototypes for learning and demonstration. Synthetic or public data only; nothing connects to a real operator's systems.",
+    "storyLabel": "Illustration, made-up data",
+    "comingSoon": "App coming soon",
+    "openApp": "Open app",
+    "statusNote": "Solid border = being built or live. Dashed = planned or later. Dotted = design only."
+  },
+  "sections": [
+    {
+      "id": "big-picture",
+      "show": true,
+      "nav": "Big picture",
+      "title": "The big picture: AI agents working for each telco team",
+      "lede": "Each telco team gets its own AI agents. A Master AI Agent passes work between them through shared data, and a person approves anything that affects a customer. Together they serve four business goals.",
+      "caption": "Click an agent to see what it does and open its app."
+    },
+    {
+      "id": "story",
+      "show": true,
+      "nav": "One customer story",
+      "title": "How the agents work together: one customer case",
+      "lede": "Follow one made-up customer as the agents hand the case from team to team.",
+      "caption": "Press Play, or use Back and Next. Made-up customer and figures."
+    },
+    {
+      "id": "agents",
+      "show": true,
+      "nav": "The agents",
+      "title": "The agents, team by team",
+      "lede": "Each card shows what the agent does, how it works and a link to its app. Prototypes use made-up (synthetic) or public data only."
+    },
+    {
+      "id": "who-helps",
+      "show": true,
+      "nav": "Who helps whom",
+      "title": "Which agent helps which team",
+      "lede": "Most agents have one main team, and several help other teams too.",
+      "caption": "● main team   ○ also helps"
+    },
+    {
+      "id": "skills",
+      "show": true,
+      "nav": "Skills",
+      "title": "Skills I'm building",
+      "lede": "The Gen AI and Agentic AI skills I am learning, and which agent puts each one into practice.",
+      "coursesTitle": "Courses in progress"
+    }
+  ],
+  "platform": {
+    "sharedData": {
+      "name": "Shared customer data",
+      "note": "one table + an event log"
+    },
+    "human": {
+      "id": "human",
+      "name": "Human approval",
+      "short": "Human approval",
+      "note": "a person approves any customer action"
+    }
+  },
+  "goals": [
+    {
+      "id": "opex",
+      "icon": "↓",
+      "name": "OPEX reduced",
+      "how": "fewer calls, less manual work"
+    },
+    {
+      "id": "protect",
+      "icon": "⛨",
+      "name": "Revenue protected",
+      "how": "billing leaks found and fixed"
+    },
+    {
+      "id": "fraud",
+      "icon": "⚑",
+      "name": "Fraud prevented",
+      "how": "suspicious use caught early"
+    },
+    {
+      "id": "grow",
+      "icon": "↑",
+      "name": "Revenue increased",
+      "how": "right offers, customers kept"
+    }
+  ],
+  "teams": [
+    {
+      "id": "sales",
+      "name": "Sales",
+      "short": "Sales",
+      "goals": [
+        "grow"
+      ]
+    },
+    {
+      "id": "mkt",
+      "name": "Marketing",
+      "short": "Mktg",
+      "goals": [
+        "grow"
+      ]
+    },
+    {
+      "id": "cs",
+      "name": "Customer Support",
+      "short": "Support",
+      "goals": [
+        "opex"
+      ]
+    },
+    {
+      "id": "ra",
+      "name": "Revenue Assurance",
+      "short": "RA",
+      "goals": [
+        "protect",
+        "fraud"
+      ]
+    },
+    {
+      "id": "ops",
+      "name": "Operations",
+      "short": "Ops",
+      "goals": [
+        "opex"
+      ]
+    }
+  ],
+  "statuses": [
+    "Live",
+    "In progress",
+    "Next",
+    "Planned",
+    "Later",
+    "Design only"
+  ],
+  "agents": [
+    {
+      "id": "co",
+      "name": "Master AI Agent",
+      "short": "Master AI",
+      "tagline": "controls and connects all agents",
+      "deck": "",
+      "mainTeams": [
+        "shared"
+      ],
+      "alsoHelps": [
+        "sales",
+        "mkt",
+        "cs",
+        "ra",
+        "ops"
+      ],
+      "brain": "Orchestrator + human approval",
+      "status": "Planned",
+      "purpose": "The controller and connector of all the agents. Each agent can work on its own, and through the Master AI Agent they also work together, with people and with ticketing tools such as Jira. It reads events from the shared log, decides which agent or person acts next, and sends any action that affects a customer to a person for approval first.",
+      "input": "Events from all agents, people and tickets",
+      "output": "Which agent or person acts next",
+      "link": ""
+    },
+    {
+      "id": "hp",
+      "name": "AI Hyper-personalisation Agent",
+      "short": "Hyper-personalisation",
+      "tagline": "right offer for each customer",
+      "deck": "",
+      "mainTeams": [
+        "sales",
+        "mkt"
+      ],
+      "alsoHelps": [],
+      "brain": "Rules + value calculation (LLM optional)",
+      "status": "Planned",
+      "purpose": "Picks the right offer, upgrade or retention deal for each customer and checks it is worth more than it costs.",
+      "input": "Customer profile + churn risk",
+      "output": "Best offer and its value",
+      "link": ""
+    },
+    {
+      "id": "ch",
+      "name": "AI Churn Prediction Agent",
+      "short": "Churn Prediction",
+      "tagline": "who may leave, and why",
+      "deck": "",
+      "mainTeams": [
+        "mkt"
+      ],
+      "alsoHelps": [
+        "sales",
+        "cs"
+      ],
+      "brain": "ML model",
+      "status": "In progress",
+      "purpose": "Predicts which customers may leave and why, so Marketing can target retention offers.",
+      "input": "7,000 public customer records",
+      "output": "Risk score + top reasons",
+      "link": ""
+    },
+    {
+      "id": "cs",
+      "name": "GenAI Customer Service Agent",
+      "short": "GenAI Customer Service",
+      "tagline": "answers bill questions",
+      "deck": "",
+      "mainTeams": [
+        "cs"
+      ],
+      "alsoHelps": [
+        "ops"
+      ],
+      "brain": "LLM + RAG",
+      "status": "Next",
+      "purpose": "Answers customer questions in plain English, starting with “why is my bill high?”, using only the bill and tariff and quoting the lines it used, so fewer customers need to call.",
+      "input": "Bill + tariff document",
+      "output": "Plain-English answer",
+      "link": ""
+    },
+    {
+      "id": "ra",
+      "name": "Revenue Assurance Agent",
+      "short": "Revenue Assurance",
+      "tagline": "finds billing mismatches",
+      "deck": "",
+      "mainTeams": [
+        "ra"
+      ],
+      "alsoHelps": [],
+      "brain": "Rules + LLM note",
+      "status": "Next",
+      "purpose": "Compares what each customer used with what they were billed, flags mismatches and writes a short note for an analyst.",
+      "input": "Usage + billing records",
+      "output": "Leakage case",
+      "link": ""
+    },
+    {
+      "id": "fr",
+      "name": "Fraud Agent",
+      "short": "Fraud",
+      "tagline": "flags suspicious calling",
+      "deck": "",
+      "mainTeams": [
+        "ra"
+      ],
+      "alsoHelps": [
+        "cs"
+      ],
+      "brain": "Rules + anomaly detection",
+      "status": "Later",
+      "purpose": "Flags suspicious calling patterns, such as SIM-box signs or unusual international calls, and prepares a case for an investigator.",
+      "input": "Call records",
+      "output": "Fraud case",
+      "link": ""
+    },
+    {
+      "id": "bc",
+      "name": "AI Bill Check Agent",
+      "short": "Bill Check",
+      "tagline": "checks a disputed bill",
+      "deck": "",
+      "mainTeams": [
+        "ra"
+      ],
+      "alsoHelps": [
+        "cs"
+      ],
+      "brain": "Rules + LLM note",
+      "status": "Planned",
+      "purpose": "When a customer disputes a bill, it checks each bill line against usage, tariff and order history and explains what is wrong. Until it is built, a person on the billing team does this step through a Jira ticket.",
+      "input": "Disputed bill + usage, tariff and order history",
+      "output": "Bill check result with the wrong lines",
+      "link": ""
+    },
+    {
+      "id": "oa",
+      "name": "Order Automation Agent",
+      "short": "Order Automation",
+      "tagline": "fixes stuck orders",
+      "deck": "",
+      "mainTeams": [
+        "ops"
+      ],
+      "alsoHelps": [
+        "sales",
+        "cs"
+      ],
+      "brain": "Rules + LLM",
+      "status": "Later",
+      "purpose": "Finds stuck or failed orders and suggests the fix.",
+      "input": "Order records",
+      "output": "Suggested fix",
+      "link": ""
+    },
+    {
+      "id": "nw",
+      "name": "AIOps Network Assurance Agent",
+      "short": "AIOps Network Assurance",
+      "tagline": "warns of network faults",
+      "deck": "",
+      "mainTeams": [
+        "ops"
+      ],
+      "alsoHelps": [
+        "mkt",
+        "cs"
+      ],
+      "brain": "Anomaly detection",
+      "status": "Design only",
+      "purpose": "Predicts network faults from alarms and performance data (design stage).",
+      "input": "Network alarms",
+      "output": "Fault warning",
+      "link": ""
+    }
+  ],
+  "story": [
+    {
+      "agent": "cs",
+      "title": "The customer reports a high bill",
+      "text": "A premium postpaid customer (customer 1042) tells the GenAI Customer Service Agent that this month's bill is $87 instead of the usual $62. The agent logs a complaint and asks the Master AI Agent to find out why."
+    },
+    {
+      "agent": "co",
+      "title": "The Master AI Agent checks the order",
+      "text": "It asks the Order Automation Agent whether the order was set up wrongly (incorrect order orchestration). The order history looks correct, so the problem must be in the bill itself."
+    },
+    {
+      "agent": "human",
+      "box": "Billing team (Jira ticket)",
+      "title": "A person checks the bill, for now",
+      "text": "The AI Bill Check Agent is planned for this step. Until it is built, the Master AI Agent escalates to the billing team with a Jira ticket holding all the details. The team finds a roaming pack charged twice ($25)."
+    },
+    {
+      "agent": "co",
+      "title": "The Master AI Agent asks for a remedy",
+      "text": "With the error confirmed, it sends the case to the AI Hyper-personalisation Agent, together with the customer's past usage and value."
+    },
+    {
+      "agent": "hp",
+      "title": "A remedy that fits the customer",
+      "text": "This is a premium customer who roams often, so it proposes a $25 refund plus a 5 GB roaming bonus as an apology."
+    },
+    {
+      "agent": "human",
+      "title": "A person approves",
+      "text": "A supervisor approves and the refund goes for processing. The action is simulated, so nothing real is sent."
+    }
+  ],
+  "skillStatuses": [
+    "Applying now",
+    "Learning",
+    "Next"
+  ],
+  "skills": [
+    {
+      "group": "Gen AI",
+      "items": [
+        {
+          "name": "Prompt engineering",
+          "status": "Learning",
+          "usedIn": [
+            "cs",
+            "ra",
+            "hp",
+            "co"
+          ]
+        },
+        {
+          "name": "RAG (retrieval-augmented generation: the AI answers only from your own documents)",
+          "status": "Learning",
+          "usedIn": [
+            "cs"
+          ]
+        },
+        {
+          "name": "Grounding and evaluation",
+          "status": "Learning",
+          "usedIn": [
+            "cs",
+            "ra"
+          ]
+        },
+        {
+          "name": "Structured output",
+          "status": "Learning",
+          "usedIn": [
+            "all"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Agentic AI",
+      "items": [
+        {
+          "name": "Tool calling",
+          "status": "Learning",
+          "usedIn": [
+            "ra",
+            "cs",
+            "co"
+          ]
+        },
+        {
+          "name": "Multi-agent orchestration, e.g. LangGraph",
+          "status": "Next",
+          "usedIn": [
+            "co"
+          ]
+        },
+        {
+          "name": "Shared memory / event log",
+          "status": "Next",
+          "usedIn": [
+            "co"
+          ]
+        },
+        {
+          "name": "Human-in-the-loop",
+          "status": "Next",
+          "usedIn": [
+            "co",
+            "hp"
+          ]
+        },
+        {
+          "name": "Guardrails",
+          "status": "Learning",
+          "usedIn": [
+            "cs",
+            "co"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Data & ML",
+      "items": [
+        {
+          "name": "Python",
+          "status": "Applying now",
+          "usedIn": [
+            "all"
+          ]
+        },
+        {
+          "name": "pandas",
+          "status": "Applying now",
+          "usedIn": [
+            "ch",
+            "ra"
+          ]
+        },
+        {
+          "name": "ML prediction with scikit-learn",
+          "status": "Applying now",
+          "usedIn": [
+            "ch"
+          ]
+        },
+        {
+          "name": "Anomaly detection",
+          "status": "Next",
+          "usedIn": [
+            "fr",
+            "nw"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Build & ship",
+      "items": [
+        {
+          "name": "AI-assisted coding with Claude Code",
+          "status": "Applying now",
+          "usedIn": [
+            "this site"
+          ]
+        },
+        {
+          "name": "Streamlit apps",
+          "status": "Next",
+          "usedIn": [
+            "all"
+          ]
+        },
+        {
+          "name": "GitHub",
+          "status": "Applying now",
+          "usedIn": []
+        },
+        {
+          "name": "Netlify",
+          "status": "Applying now",
+          "usedIn": []
+        }
+      ]
+    }
+  ],
+  "courses": [
+    "Generative AI in Business (Coursera)",
+    "AI for Business (Wharton, Coursera)",
+    "Agentic AI and AI Agents: A Primer for Leaders",
+    "IBM RAG and Agentic AI (Coursera)",
+    "IBM LLMOps (Coursera)"
+  ]
+}
