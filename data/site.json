@@ -214,7 +214,7 @@
       "id": "cs",
       "name": "GenAI Customer Service Agent",
       "short": "GenAI Customer Service",
-      "tagline": "answers bill questions",
+      "tagline": "chat agent for customer queries, bills first",
       "deck": "",
       "mainTeams": [
         "cs"
@@ -223,11 +223,11 @@
         "ops"
       ],
       "brain": "LLM + RAG",
-      "status": "Next",
-      "purpose": "Answers customer questions in plain English, starting with “why is my bill high?”, using only the bill and tariff and quoting the lines it used, so fewer customers need to call.",
-      "input": "Bill + tariff document",
+      "status": "Live",
+      "purpose": "A chat agent that works out what the customer needs (bill issue, recharge, internet or WiFi) and answers in plain English using only their bill, payments and the tariff, quoting the lines it used. Bill issues are live: it spots a double charge, logs a ticket and hands the case to the Master AI Agent.",
+      "input": "Customer question + bill, payments, tariff",
       "output": "Plain-English answer",
-      "link": ""
+      "link": "https://telco-genai-agent.streamlit.app/"
     },
     {
       "id": "ra",
