@@ -176,19 +176,19 @@
       "id": "hp",
       "name": "AI Hyper-personalisation Agent",
       "short": "Hyper-personalisation",
-      "tagline": "right offer for each customer",
+      "tagline": "right remedy for each customer",
       "deck": "",
       "mainTeams": [
         "sales",
         "mkt"
       ],
       "alsoHelps": [],
-      "brain": "Rules + value calculation (LLM optional)",
-      "status": "Planned",
-      "purpose": "Picks the right offer, upgrade or retention deal for each customer and checks it is worth more than it costs.",
-      "input": "Customer profile + churn risk",
-      "output": "Best offer and its value",
-      "link": ""
+      "brain": "Rules + value calculation + LLM, human approval",
+      "status": "Live",
+      "purpose": "Picks the right remedy or offer for each customer and checks it is worth more than it costs. Live: for a confirmed double charge it proposes the refund plus a 5GB roaming bonus for a frequent traveller, explains why, drafts the message, and a supervisor approves it.",
+      "input": "Customer case + profile + churn risk",
+      "output": "Remedy, its value, and a message for approval",
+      "link": "https://telco-genai-agent.streamlit.app/hyper-personalisation"
     },
     {
       "id": "ch",
