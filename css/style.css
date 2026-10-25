@@ -159,7 +159,7 @@ table.grid { border-collapse: collapse; width: 100%; font-size: 15px; }
 .group-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-bottom: 2px solid var(--blue); padding-bottom: 4px; margin-bottom: 12px; font: 700 13px var(--font-label); letter-spacing: .1em; text-transform: uppercase; color: var(--blue); }
 .group-head span:last-child { color: var(--soft); font-weight: 600; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(var(--card-width), 100%), 1fr)); gap: 14px; }
-.card { border: 1.5px solid var(--line); border-radius: var(--radius); padding: var(--box-padding); display: flex; flex-direction: column; gap: 10px; scroll-margin-top: 70px; }
+.card { border: 1.5px solid var(--line); border-radius: var(--radius); padding: var(--box-padding); display: flex; flex-direction: column; gap: 10px; scroll-margin-top: 96px; }
 .card svg.io { width: 100%; max-width: 440px; height: auto; }   /* input -> brain -> output stays a readable size in wide cards */
 /* A team with one agent: on wide screens the text sits on the left and the diagram on the right. */
 @media (min-width: 760px) {

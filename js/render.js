@@ -132,29 +132,29 @@
     document.getElementById('story-label').textContent = T.storyLabel;
   }
 
-  // ---------- agent detail panel (opened from the big picture) ----------
-  function showPanel(a, D, L) {
-    const p = document.getElementById('agent-panel');
-    p.hidden = false;
-    p.replaceChildren(
-      h('h3', { text: a.name }),
-      h('div', { class: 'meta' }, h('span', { text: (a.deck ? a.deck + ' · ' : '') + L.teamNames(a) }), statusTag(a.status)),
-      h('p', { text: a.purpose }),
-      h('p', { class: 'meta', text: a.input + '  →  ' + a.brain + '  →  ' + a.output }),
-      h('p', {}, appButton(a, D), ' ', h('a', { href: '#card-' + a.id, text: 'See the full card' })));
-  }
   function statusTag(status) {
     return status ? h('span', { class: 'tag s-' + slug(status), text: status }) : '';
   }
 
-  // An agent box in a diagram: clickable (shows details) and keyboard-usable.
+  // Jump to an agent's card below and highlight it for a moment.
+  function goToCard(a) {
+    const card = document.getElementById('card-' + a.id);
+    if (!card) return;
+    card.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    card.setAttribute('tabindex', '-1');
+    card.focus({ preventScroll: true });
+    card.classList.remove('flash'); void card.offsetWidth; card.classList.add('flash');
+    setTimeout(() => card.classList.remove('flash'), 2500);
+  }
+
+  // An agent box in a diagram: clickable (jumps to its card) and keyboard-usable.
   function agentNode(parent, a, x, y, w, D, L, onPick, extraH) {
     const k = K();
     const nameLines = wrap(a.name, Math.floor((w - 20) / (7.6 * k)));
     const tagLines = a.tagline ? wrap(a.tagline, Math.floor((w - 20) / (6.2 * k))) : [];
     const hgt = 14 + (nameLines.length * 18 + tagLines.length * 15 + (a.status ? 24 : 4)) * k + 6 + Math.max(0, extraH || 0);
     const g = s('g', { class: 'node st-' + slug(a.status || 'none'), tabindex: 0, role: 'button', 'data-agent': a.id }, parent);
-    g.setAttribute('aria-label', a.name + (a.status ? ', ' + a.status : '') + '. Show details');
+    g.setAttribute('aria-label', a.name + (a.status ? ', ' + a.status : '') + '. Go to its card');
     s('rect', { x, y, width: w, height: hgt, rx: 8, class: 'd-box' }, g);
     let ty = y + 8 + 14 * k;
     nameLines.forEach(l => { fit(svgText(g, x + 10, ty, l, 't-title'), w - 20); ty += 18 * k; });
@@ -199,7 +199,7 @@
     const co = D.agents.find(a => a.mainTeams[0] === 'shared');
     const pick = a => {
       svg.querySelectorAll('.node').forEach(n => n.classList.toggle('sel', n.dataset.agent === a.id));
-      showPanel(a, D, L);
+      goToCard(a);
     };
     const W = wide ? 1080 : Math.max(300, Math.min(width, 700));
     const k = K(), ib = Math.round(58 * k), hb = Math.round(36 * k);
