@@ -227,7 +227,7 @@
       "purpose": "A chat agent that works out what the customer needs (bill issue, recharge, internet or WiFi) and answers in plain English using only their bill, payments and the tariff, quoting the lines it used. Bill issues are live: it spots a double charge, logs a ticket and hands the case to the Master AI Agent.",
       "input": "Customer question + bill, payments, tariff",
       "output": "Plain-English answer",
-      "link": "https://telco-ai-portfolio.streamlit.app/customer-service"
+      "link": "https://telco-ai-portfolio.streamlit.app/"
     },
     {
       "id": "ra",
