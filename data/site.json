@@ -1,5 +1,5 @@
 {
-  "_help": "All page content lives here. Edit text between the quotes, keep the quotes and commas, save, refresh. To reorder sections, move whole { ... } blocks in \"sections\". To hide one, set \"show\": false. See README.md.",
+  "_help": "All page content lives here. Edit text between the quotes, keep the quotes and commas, save, refresh. To reorder sections, move whole { ... } blocks in \"sections\". To hide one, set \"show\": false. See README.md. Each agent can have an \"industry\" line: a fact from a report with its source and page.",
   "owner": {
     "name": "Rohit Chauhan",
     "tagline": "15+ years of experience in Telecom BSS: Billing, Charging, International Roaming, Data Clearing, Mediation, RA/FM, Payments/Collections. Roles: Service Delivery (Operations), Agile Product Development, Solution Architect, Presales and Test Lead",
@@ -170,7 +170,11 @@
       "purpose": "The controller and connector of all the agents. Each agent can work on its own, and through the Master AI Agent they also work together, with people and with ticketing tools such as Jira. It reads events from the shared log, decides which agent or person acts next, and sends any action that affects a customer to a person for approval first.",
       "input": "Events from all agents, people and tickets",
       "output": "Which agent or person acts next",
-      "link": ""
+      "link": "",
+      "industry": {
+        "text": "43% of telcos have launched more than 10 AI agents, and the biggest value comes from agents working together as one \"digital assembly line\".",
+        "source": "Google Cloud, AI Agent Trends 2026, p.13"
+      }
     },
     {
       "id": "hp",
@@ -188,7 +192,11 @@
       "purpose": "Picks the right remedy or offer for each customer and checks it is worth more than it costs. Live: for a confirmed double charge it proposes the refund plus a 5GB roaming bonus for a frequent traveller, explains why, drafts the message, and a supervisor approves it.",
       "input": "Customer case + profile + churn risk",
       "output": "Remedy, its value, and a message for approval",
-      "link": "https://telco-ai-portfolio.streamlit.app/hyper-personalisation"
+      "link": "https://telco-ai-portfolio.streamlit.app/hyper-personalisation",
+      "industry": {
+        "text": "Verizon added AI to customer service and reports 40% more sales.",
+        "source": "Google Cloud, AI Agent Trends 2026, p.20"
+      }
     },
     {
       "id": "ch",
@@ -208,7 +216,11 @@
       "purpose": "Predicts which customers may leave and why, so Marketing can target retention offers.",
       "input": "7,000 public customer records",
       "output": "Risk score + top reasons",
-      "link": ""
+      "link": "",
+      "industry": {
+        "text": "Telcos use AI in customer care to build loyalty and longer customer lifetime value.",
+        "source": "Google Cloud, AI Agent Trends 2026, p.19"
+      }
     },
     {
       "id": "cs",
@@ -227,7 +239,11 @@
       "purpose": "A chat agent that works out what the customer needs (bill issue, recharge, internet or WiFi) and answers in plain English using only their bill, payments and the tariff, quoting the lines it used. Bill issues are live: it spots a double charge, logs a ticket and hands the case to the Master AI Agent.",
       "input": "Customer question + bill, payments, tariff",
       "output": "Plain-English answer",
-      "link": "https://telco-ai-portfolio.streamlit.app/"
+      "link": "https://telco-ai-portfolio.streamlit.app/",
+      "industry": {
+        "text": "45% of telcos with AI agents in production use them for customer service.",
+        "source": "Google Cloud, AI Agent Trends 2026, p.19"
+      }
     },
     {
       "id": "ra",
@@ -263,7 +279,11 @@
       "purpose": "Flags suspicious calling patterns, such as SIM-box signs or unusual international calls, and prepares a case for an investigator.",
       "input": "Call records",
       "output": "Fraud case",
-      "link": ""
+      "link": "",
+      "industry": {
+        "text": "47% of telcos with AI agents in production use them for security operations and cybersecurity.",
+        "source": "Google Cloud, AI Agent Trends 2026, p.24"
+      }
     },
     {
       "id": "bc",
@@ -322,7 +342,11 @@
       "purpose": "Predicts network faults from alarms and performance data (design stage).",
       "input": "Network alarms",
       "output": "Fault warning",
-      "link": ""
+      "link": "",
+      "industry": {
+        "text": "39% of telcos using AI agents use them for network configuration, and 34% for fixing network faults.",
+        "source": "Google Cloud, AI Agent Trends 2026, p.6"
+      }
     }
   ],
   "story": [

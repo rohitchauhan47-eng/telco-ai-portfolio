@@ -165,7 +165,7 @@ table.grid { border-collapse: collapse; width: 100%; font-size: 15px; }
 @media (min-width: 760px) {
   .card.solo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); column-gap: 28px; align-items: start; }
   .card.solo > .card-top, .card.solo > .action { grid-column: 1 / -1; }
-  .card.solo > p { grid-column: 1; grid-row: 2; }
+  .card.solo > .card-text { grid-column: 1; grid-row: 2; }
   .card.solo > svg.io { grid-column: 2; grid-row: 2; }
 }
 .card:target, .card.flash { border-color: var(--blue); box-shadow: 0 0 0 3px var(--tint2); }
@@ -173,6 +173,10 @@ table.grid { border-collapse: collapse; width: 100%; font-size: 15px; }
 .card h3 { font-size: 18px; }
 .deck { font: 600 11px var(--font-label); letter-spacing: .08em; text-transform: uppercase; color: var(--soft); margin: 0; }
 .card p { margin: 0; }
+.card-text { display: flex; flex-direction: column; gap: 8px; }
+.card .industry { font-size: 0.9em; background: var(--tint); border-left: 3px solid var(--blue); border-radius: 6px; padding: 6px 10px; }
+.card .industry-label { font-weight: 700; }
+.card .industry-src { font-style: italic; opacity: 0.8; }
 .card .action { margin-top: auto; }
 .card .action .btn, .card .action .soon { display: block; text-align: center; padding: 8px; border-radius: 8px; }
 .card .action .soon { background: var(--tint); border: 1px solid var(--line); font-style: normal; font-weight: 600; }

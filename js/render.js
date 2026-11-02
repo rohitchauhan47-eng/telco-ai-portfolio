@@ -373,7 +373,12 @@
           h('span', { text: goals.map(g => L.goal(g).name).join(' · ') })),
         h('div', { class: 'cards' }, agents.map(a => h('article', { class: agents.length === 1 ? 'card solo' : 'card', id: 'card-' + a.id },
           h('div', { class: 'card-top' }, h('div', {}, a.deck ? h('p', { class: 'deck', text: a.deck, path: `agents.${D.agents.indexOf(a)}.deck` }) : '', h('h3', { text: a.name, path: `agents.${D.agents.indexOf(a)}.name` })), statusTag(a.status)),
-          h('p', { text: a.purpose, path: `agents.${D.agents.indexOf(a)}.purpose` }),
+          h('div', { class: 'card-text' },
+            h('p', { text: a.purpose, path: `agents.${D.agents.indexOf(a)}.purpose` }),
+            a.industry ? h('p', { class: 'industry' },
+              h('span', { class: 'industry-label', text: 'Industry: ' }),
+              h('span', { text: a.industry.text, path: `agents.${D.agents.indexOf(a)}.industry.text` }),
+              h('span', { class: 'industry-src', text: ' (' + a.industry.source + ')' })) : ''),
           ioDiagram(a),
           h('div', { class: 'action' }, appButton(a, D)))))));
     });
